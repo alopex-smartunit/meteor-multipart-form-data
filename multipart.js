@@ -4,22 +4,21 @@ function multipartFormData (parts) {
 
   _.each(parts, function(value, name, blah) {
 
-    if ( name === 'attachment' ) {
+    if ( name === 'XMLfile' ) {
       bodyString.push(
-        '--' + boundary,
-        'Content-Disposition: form-data; name="' + name + '";'
-        + 'filename="' + value.filename + '"',
-        'Content-type: ' + value.contentType,
+        `--${boundary}`,
+        `Content-Disposition: form-data; name=${name}; filename=${value.filename}`,
+        `Content-type: ${value.contentType}`,
         '',
         value.value);
     } else {
       bodyString.push(
-        '--' + boundary,
-        'Content-Disposition: form-data; name="' + name + '"', 
+        `--${boundary}`,
+        `Content-Disposition: form-data; name=${name}`,
         '',
         value);
     }
-    
+
   });
 
   bodyString.push('--' + boundary + '--','');

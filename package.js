@@ -1,4 +1,5 @@
 Package.describe({
+  name: "smartunit:multipart-form-data",
   summary: "Create a multipart/form-data encoded string",
   version: "0.0.2",
   git: "https://github.com/alopex-smartunit/meteor-multipart-form-data.git"
