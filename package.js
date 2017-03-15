@@ -1,7 +1,7 @@
 Package.describe({
-  summary: "Create a multipart/form-data encoded string. Useful for sending attachments with Mailgun.",
+  summary: "Create a multipart/form-data encoded string",
   version: "0.0.2",
-  git: "https://github.com/rosh93/meteor-multipart-form-data.git"
+  git: "https://github.com/alopex-smartunit/meteor-multipart-form-data.git"
 });
 
 Package.on_use(function(api, where) {
